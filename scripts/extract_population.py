@@ -5,7 +5,7 @@ import pickle
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
-
+ 
 
 search = "https://www.worldometers.info/world-population/world-population-by-year/"
 html_text = requests.get(search).text
@@ -23,5 +23,5 @@ for ss in soup.find_all("tr"):
         print("--- {}: {}".format(year, world_population[year]))
 
 file_dir = os.path.dirname(os.path.abspath(__file__))
-with open(os.path.join(file_dir, '../data/world_population.pkl'), 'wb') as handle:
+with open(os.path.join(file_dir,'../data/world_population.pkl'), 'wb') as handle:
     pickle.dump(world_population, handle, protocol=pickle.HIGHEST_PROTOCOL)
