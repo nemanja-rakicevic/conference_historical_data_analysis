@@ -1,4 +1,13 @@
 
+"""
+Description:    Script for extracting the country names for the institutions
+                in the database, by scraping location info from Wikipedia.
+                Also finds the GDP matches from the spreadsheet.
+
+Issues:         the Location info is not consistent on Wikipedia, or the
+                institution names are not informative enough
+"""
+
 import os
 import re
 import pickle

@@ -1,16 +1,21 @@
 
+"""
+Description:    Main script for downloading the paper information from the
+                conference website.
+                Also tries to extract the citations (see extract_citations.py)
+
+"""
+
 import os
 import re
 import json
 import pickle
 import requests
-
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 
 
 def get_num_citations(title, authors, year):
-    ### Has issues, check
     ### Has issues, check
     authors = '+'.join(['+'.join([
         aa['given_name'], aa['family_name']]) for aa in authors])

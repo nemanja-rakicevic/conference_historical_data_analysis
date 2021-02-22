@@ -1,4 +1,14 @@
 
+"""
+Description:    Script for extracting the citations of the papers in the
+                database. Works by sending requests to Google Scholar and
+                scraping "Cited by" information.
+
+Issues:         Google Scholar has a limit to the number of requests.
+                I also tried DBLP, MS Academic and Semantic Scholar but could
+                not get them to work.
+"""
+
 import os
 import re
 import time
@@ -26,7 +36,8 @@ def get_num_citations(title, authors, year, timeout=100):
 
 
 file_dir = os.path.dirname(os.path.abspath(__file__))
-with open(os.path.join(file_dir, '../data/neurips_conf_data.pkl'), 'rb') as handle:
+with open(os.path.join(
+        file_dir, '../data/neurips_conf_data.pkl'), 'rb') as handle:
     conf_data = pickle.load(handle)
 
 
