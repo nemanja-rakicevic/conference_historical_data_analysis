@@ -9,5 +9,5 @@ The `data` directory contains alredy extracted data.
 
 ## NeurIPS conference
 
-The plots and analysis featured in the [blogpost](url) were generated with
+All the plots and analysis featured in the Towards Data Science [blogpost](https://towardsdatascience.com/neurips-conference-historical-data-analysis-e45f7641d232) were generated with
 the [notebook](https://github.com/nemanja-rakicevic/conference_historical_data_analysis/blob/main/analysing_data__neurips.ipynb).
